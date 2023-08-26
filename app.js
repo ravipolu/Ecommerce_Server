@@ -20,8 +20,8 @@ const path = require("path");
 
 app.use(express.json());
 app.use(cookieParser());
-app.use("*",cors({
-    origin:true,
+app.use(cors({
+    origin:"https://ecommerceappserver-n4oq.onrender.com",
     credentials: true,
 }));
 // app.use((req, res, next) => {
