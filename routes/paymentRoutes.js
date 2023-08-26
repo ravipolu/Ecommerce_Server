@@ -5,7 +5,7 @@ const { processPayment, sendStripeApiKey } = require("../controllers/paymentCont
 
 // isAuthenticatedUser
 
-router.route("/payment/process").post( isAuthenticatedUser, processPayment )
+router.route("/payment/process").post( processPayment )
 router.route("/stripeapikey").get( sendStripeApiKey )
 
 
