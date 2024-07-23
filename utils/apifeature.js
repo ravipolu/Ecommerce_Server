@@ -21,11 +21,11 @@ class ApiFeatures {
 
     filter(){
         const queryCopy = {...this.queryStr};
-
+        // console.log('1',queryCopy);
         const removeFeilds = ["keyword", "page", "limit"];
         
         removeFeilds.forEach((key) => delete queryCopy[key]);
-        
+        // console.log('2',queryCopy);
         let queryStr = JSON.stringify(queryCopy);
         queryStr = queryStr.replace(/\b(gt|gte|lt|lte)\b/g, (key) => `$${key}`);
         

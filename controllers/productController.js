@@ -114,8 +114,14 @@ exports.updateProduct = catchAsyncError(async (req, res, next) => {
 
     let imageList = [];
 
-    for(let j=0;j<req.body.images.length ; j++){
-        imageList.push(req.body.images[j])
+    // for(let j=0;j<req.body.images.length ; j++){
+    //     imageList.push(req.body.images[j])
+    // }
+
+    if(typeof req.body.images === 'string'){
+        imageList.push(req.body.images);
+    }else{
+        images = req.body.images;
     }
 
     

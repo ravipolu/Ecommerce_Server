@@ -16,6 +16,8 @@ exports.registerUser = catchAsyncError(async (req,res,next)=>{
         crop: "scale",
     })
 
+    
+
     const {name, email, password} = (req.body);
 
     const user = await User.create({
@@ -94,7 +96,7 @@ exports.forgetPassword = catchAsyncError( async(req,res,next)=>{
     await user.save({ validateBeforeSave: false});
 
 
-    const resetPasswordUrl = `${req.protocol}://${req.get("host")}/password/reset/${resetToken}`;
+    const resetPasswordUrl = `${req.protocol}://${req.get("host")}/api/v1/password/reset/${resetToken}`;
 
 
     const message = `your password reset token temp is :- \n\n ${resetPasswordUrl} \n\n If you have not requested this email then, Please ignore it`;
