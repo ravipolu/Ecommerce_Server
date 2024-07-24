@@ -21,7 +21,7 @@ const path = require("path");
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
-    origin: "https://ecommerce-server-ib5r.onrender.com" , //"" http://localhost:3000 
+    origin: "https://star-ecommerce-nine.vercel.app" , //"" http://localhost:3000 https://ecommerce-server-ib5r.onrender.com https://star-ecommerce-nine.vercel.app/
     credentials: true,
 }));
 // app.use((req, res, next) => {
