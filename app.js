@@ -21,7 +21,7 @@ const path = require("path");
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
-    origin: "http://localhost:3000" , //"https://ecommerce-app-gwr8.onrender.com"
+    origin: "https://ecommerce-server-ib5r.onrender.com" , //"" http://localhost:3000 
     credentials: true,
 }));
 // app.use((req, res, next) => {
